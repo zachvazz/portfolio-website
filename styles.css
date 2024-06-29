@@ -114,7 +114,7 @@ h1 {
 
 h2 {
   color: var(--teal);
-  font-size: calc(3vw);
+  font-size: calc(1vw);
   font-family: "Roboto Mono", monospace;
   font-weight: bold;
 }
@@ -122,6 +122,13 @@ h2 {
 h3 {
   color: var(--green);
 
+}
+
+h4 {
+  color: var(--teal);
+  font-size: calc(2.5vw);
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
 }
 
 @keyframes gradient {
@@ -153,7 +160,7 @@ h3 {
   pointer-events: none;
 }
 .container .card {
-  max-width: 28rem;
+  max-width: 48rem;
   color: #fff da;
   padding: 1.5rem;
   background-color: var(--gray);
@@ -189,7 +196,8 @@ h3 {
   transform: translateY(8px);
 }
 .container .card:nth-child(n) {
-  transform: rotate(-5deg);
+  transform: none;
+  /* transform: rotate(-5deg); */
 }
 .cards:hover > .card:hover {
   transform: scale(1.15);
@@ -198,4 +206,34 @@ h3 {
 }
 .cards:hover > .card:not(:hover) {
   opacity: 0.5;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  /* padding: 10px; */
+}
+
+.gallery img {
+  width: 170px;  /* Desired fixed width */
+  height: 170px; /* Desired fixed height */
+  object-fit: cover; /* Covers the dimension of the container, cropping excess */
+  display: block;
+  margin: 10px;
+  border: 2px solid #ccc; /* Optional border */
+  box-shadow: 2px 2px 5px #888888; /* Optional shadow */
+}
+
+
+.container-home {
+  font-size: 24px; /* Example font size for visibility */
+}
+.inline-image {
+  border: 5px solid rgb(113, 112, 112); /* Optional border */
+  box-shadow: 2px 2px 5px #888888; /* Optional shadow */
+  margin-top: 20px;
+  vertical-align: middle; /* Aligns the middle of the image with the line of text */
+  width: 26%; /* Example size, adjust as needed */
+  height: auto; /* Maintains aspect ratio */
 }
