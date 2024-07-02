@@ -8,11 +8,12 @@
   --brown: #bf5700;
   --green: #9a9a76;
   --yellow: #e2b36f;
+  --tan: #f0e7da;
 }
 
 /* main bulk */
 * {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Trebuchet MS", monospace;
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
@@ -20,7 +21,7 @@
 }
 
 body {
-  background-image: url("graph.png");
+  background-color: var(--tan);
 }
 
 section {
@@ -30,13 +31,13 @@ section {
   border-bottom: 1px solid white;
   padding: 1rem;
   height: 100vh;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   position: relative;
 }
 
 .next-section-link {
   position: absolute;
-  font-family: "Syne Mono", monospace;
+  font-family: "Helvetica", monospace;
   top: 80vh;
   right: 0;
   height: 100px;
@@ -44,7 +45,7 @@ section {
 }
 
 p {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Helvetica", monospace;
   color: var(--yellow);
 }
 
@@ -90,7 +91,7 @@ a {
   border-right: 0.2em solid var(--brown);
   white-space: nowrap;
   animation: typing 2s forwards;
-  font-size: 4vw;
+  font-size: 3vw;
   width: 0;
 }
 @keyframes typing {
@@ -108,27 +109,28 @@ h1 {
   color: var(--gray);
   width: 100%;
   left: 0;
-  font-size: calc(1rem + 3vw);
+  font-size: 3vw;
   font-weight: 800;
 }
 
 h2 {
   color: var(--teal);
   font-size: calc(1vw);
-  font-family: "Roboto Mono", monospace;
+  font-family: "Helvetica", monospace;
   font-weight: bold;
 }
 
 h3 {
   color: var(--green);
-
+  font-size: calc(1.3vw);
+  font-family: "Helvetica", monospace;
 }
 
 h4 {
   color: var(--teal);
-  font-size: calc(2.5vw);
-  font-family: "Roboto Mono", monospace;
-  font-weight: bold;
+  font-size: calc(1.7vw);
+  font-family: "Helvetica", monospace;
+  /* font-weight: bold; */
 }
 
 @keyframes gradient {
@@ -185,7 +187,7 @@ h4 {
   right: 0;
 }
 .container .card .date {
-  color:rgba(213, 225, 213, 0.63);
+  color: rgba(213, 225, 213, 0.63);
   font-size: 0.85rem;
   margin-bottom: 1.5rem;
 }
@@ -216,24 +218,43 @@ h4 {
 }
 
 .gallery img {
-  width: 170px;  /* Desired fixed width */
+  width: 170px; /* Desired fixed width */
   height: 170px; /* Desired fixed height */
   object-fit: cover; /* Covers the dimension of the container, cropping excess */
   display: block;
   margin: 10px;
-  border: 2px solid #ccc; /* Optional border */
+  border: 5px solid rgb(113, 112, 112); /* Optional border */
   box-shadow: 2px 2px 5px #888888; /* Optional shadow */
 }
-
 
 .container-home {
   font-size: 24px; /* Example font size for visibility */
 }
 .inline-image {
   border: 5px solid rgb(113, 112, 112); /* Optional border */
+  border-radius: 50%;
   box-shadow: 2px 2px 5px #888888; /* Optional shadow */
   margin-top: 20px;
   vertical-align: middle; /* Aligns the middle of the image with the line of text */
   width: 26%; /* Example size, adjust as needed */
   height: auto; /* Maintains aspect ratio */
+}
+
+.final-image {
+  border: 5px solid rgb(113, 112, 112); /* Optional border */
+  box-shadow: 2px 2px 5px #888888; /* Optional shadow */
+  margin-top: 20px;
+  vertical-align: middle; /* Aligns the middle of the image with the line of text */
+  width: 45%; /* Example size, adjust as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.flex-box {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: flex-start; /* Align items horizontally at the start */
+}
+
+.about {
+  margin-right: 20px;
 }
